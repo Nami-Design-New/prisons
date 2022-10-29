@@ -96,6 +96,16 @@ body {
   background-size: 440px 400px;
   isolation: isolate;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  padding: 50px;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+  }
 }
 body::before {
   content: "";
@@ -121,21 +131,7 @@ body::after {
   z-index: -1;
   opacity: 0.3;
 }
-
-.mainPage {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  padding: 50px;
-  gap: 30px;
-}
-@media (max-width: 768px) {
-  .mainPage {
-    flex-direction: column;
-    padding: 10px;
-  }
-}
-.mainPage aside {
+body aside {
   padding: 20px;
   border-radius: 24px;
   display: flex;
@@ -149,33 +145,33 @@ body::after {
   max-height: 90vh;
 }
 @media (max-width: 768px) {
-  .mainPage aside {
+  body aside {
     padding: 10px 20px;
     position: relative;
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.mainPage aside img {
+body aside img {
   width: 150px;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (max-width: 768px) {
-  .mainPage aside img {
+  body aside img {
     width: 100px;
   }
 }
-.mainPage aside .vision {
+body aside .vision {
   margin-top: auto;
 }
-.mainPage content {
+body content {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.mainPage content .languages {
+body content .languages {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,12 +186,12 @@ body::after {
   isolation: isolate;
 }
 @media (max-width: 768px) {
-  .mainPage content .languages {
+  body content .languages {
     gap: 40px;
     padding: 30px 10px;
   }
 }
-.mainPage content .languages .language {
+body content .languages .language {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,7 +204,7 @@ body::after {
   isolation: isolate;
   justify-content: center;
 }
-.mainPage content .languages .language::before {
+body content .languages .language::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -220,7 +216,7 @@ body::after {
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
   border-radius: 16px;
 }
-.mainPage content .languages .language img {
+body content .languages .language img {
   height: 100px;
   width: 150px;
   -o-object-fit: cover;
@@ -228,24 +224,24 @@ body::after {
   border-radius: 16px;
 }
 @media (max-width: 992px) {
-  .mainPage content .languages .language img {
+  body content .languages .language img {
     height: 60px;
     width: 90px;
     border-radius: 8px;
   }
 }
-.mainPage content .languages .language h1 {
+body content .languages .language h1 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 18px !important;
 }
-.mainPage content .languages .language:hover {
+body content .languages .language:hover {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
   transform: translateY(-15px) scale(1.03);
   transform-origin: center;
   z-index: 2;
 }
-.mainPage .navigetor {
+body .navigetor {
   display: flex;
   padding: 16px;
   margin: 0;
@@ -254,32 +250,32 @@ body::after {
   border-radius: 16px;
   border: 3px solid #fcf9ff;
 }
-.mainPage .navigetor li {
+body .navigetor li {
   position: relative;
 }
-.mainPage .navigetor li a {
+body .navigetor li a {
   padding: 10px 20px;
   display: flex;
   align-items: center;
 }
-.mainPage .navigetor li a img {
+body .navigetor li a img {
   width: 20px;
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-left: 5px;
 }
-.mainPage .navigetor li::after {
+body .navigetor li::after {
   content: "-";
   position: absolute;
   left: 0px;
   top: 50%;
   transform: translateY(-50%);
 }
-.mainPage .navigetor li:last-child::after {
+body .navigetor li:last-child::after {
   display: none;
 }
-.mainPage .categories {
+body .categories {
   padding: 30px 0px;
   display: flex;
   gap: 20px;
@@ -287,7 +283,7 @@ body::after {
   justify-content: center;
   flex-wrap: wrap;
 }
-.mainPage .categories .category {
+body .categories .category {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,14 +292,14 @@ body::after {
   padding: 16px;
   border-radius: 16px;
 }
-.mainPage .categories .category img {
+body .categories .category img {
   width: 150px;
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (max-width: 768px) {
-  .mainPage .categories .category img {
+  body .categories .category img {
     width: 120px;
   }
 }

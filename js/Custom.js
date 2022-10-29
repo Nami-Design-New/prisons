@@ -1,7 +1,4 @@
-$(document).ready(function () {
-
-  
-});
+$(document).ready(function () {});
 // ////////////////////////////////////////
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -18,14 +15,6 @@ $(document).ready(function () {
   //spinner
   $(".loader ").fadeOut("slow");
 
-  // odometer
-  $(".odometer").appear(function (e) {
-    var odo = $(".odometer");
-    odo.each(function () {
-      var countNumber = $(this).attr("data-count");
-      $(this).html(countNumber);
-    });
-  });
   // aos
   AOS.init({
     offset: 60,
@@ -39,14 +28,15 @@ $(document).ready(function () {
     var class_ = "mainSection";
     $("section").each(function (i) {
       class_ = $(this).attr("class");
-      $("." + class_ + "div[data-aos]").each(function (i) {
+      $("." + class_ + " div[data-aos]").each(function (i) {
         var d = 0;
-        d = i * 300;
+        d = i * 100;
         $(this).attr("data-aos-delay", d);
         d = 0;
       });
     });
-  }aosDelay();
+  }
+  aosDelay();
 
   // tooltip
   var tooltipTriggerList = [].slice.call(
@@ -56,5 +46,3 @@ $(document).ready(function () {
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 });
-
-
