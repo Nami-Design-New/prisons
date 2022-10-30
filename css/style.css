@@ -458,6 +458,11 @@ body .explanationDiv .explanationContent {
   padding: 16px;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  body .explanationDiv .explanationContent {
+    min-height: unset;
+  }
+}
 body .explanationDiv .explanationContent iframe,
 body .explanationDiv .explanationContent video,
 body .explanationDiv .explanationContent img {

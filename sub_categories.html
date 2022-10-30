@@ -132,10 +132,10 @@
   <script>
     $(document).on("click", function (a) {
       if ($(a.target).is(".tab-pane") === false) {
-        $(".tab-pane .active").removeClass("active");
+        $(".tab-pane").removeClass("active show");
+        $(".link").removeClass("active");
       }
     });
-
     
   </script>
 </body>
